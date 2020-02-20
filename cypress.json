@@ -1,7 +1,9 @@
 {
     "baseUrl" : "https://www.google.com",
-    "reporter": "cypress-multi-reporters",
+    "reporter": "junit",
     "reporterOptions": {
+        "mochaFile": "cypress/reports/mocha/cypress-results-[hash].xml",
+        "toConsole": true,
         "reporterEnabled": "mochawesome",
         "mochawesomeReporterOptions": {
             "reportDir": "cypress/reports/mocha",
