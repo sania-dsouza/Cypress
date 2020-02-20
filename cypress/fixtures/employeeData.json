@@ -1,0 +1,9 @@
+{
+  "status": "success",
+  "data": {
+    "name": "Peter Parker",
+    "salary": "100,000",
+    "age": "38",
+    "id": 57
+  }
+}

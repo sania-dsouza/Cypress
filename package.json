@@ -29,8 +29,10 @@
   "standard": {
     "globals": [
       "cy",
-      "it",
-      "describe"
+      "Cypress",
+      "describe",
+      "expect",
+      "it"
     ]
   }
 }

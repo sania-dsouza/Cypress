@@ -1,1 +1,5 @@
+/*
+Cypress.Commands.add('generateName', {
 
+})
+*/

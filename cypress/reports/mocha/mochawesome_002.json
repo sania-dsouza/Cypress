@@ -1,15 +1,15 @@
 {
   "stats": {
-    "suites": 3,
-    "tests": 3,
-    "passes": 2,
+    "suites": 1,
+    "tests": 1,
+    "passes": 0,
     "pending": 0,
     "failures": 1,
-    "start": "2020-02-20T16:40:17.402Z",
-    "end": "2020-02-20T16:40:17.402Z",
-    "duration": 6653,
-    "testsRegistered": 3,
-    "passPercent": 66.66666666666667,
+    "start": "2020-02-20T16:40:10.100Z",
+    "end": "2020-02-20T16:40:15.432Z",
+    "duration": 5332,
+    "testsRegistered": 1,
+    "passPercent": 0,
     "pendingPercent": 0,
     "other": 0,
     "hasOther": false,
@@ -17,122 +17,6 @@
     "hasSkipped": false
   },
   "results": [
-    {
-      "uuid": "b22d41c6-9f3f-42f0-9fdd-482029ec7b31",
-      "title": "",
-      "fullFile": "",
-      "file": "",
-      "beforeHooks": [],
-      "afterHooks": [],
-      "tests": [],
-      "suites": [
-        {
-          "uuid": "4cc3df4d-d8e4-49f5-be55-04b0a15bc157",
-          "title": "create an employee",
-          "fullFile": "",
-          "file": "",
-          "beforeHooks": [],
-          "afterHooks": [],
-          "tests": [
-            {
-              "title": "creates an employee with given test data using POST method",
-              "fullTitle": "create an employee creates an employee with given test data using POST method",
-              "timedOut": null,
-              "duration": 765,
-              "state": "passed",
-              "speed": "slow",
-              "pass": true,
-              "fail": false,
-              "pending": false,
-              "context": null,
-              "code": "cy.request({\n  method: 'POST',\n  url: 'http://dummy.restapiexample.com/api/v1/create',\n  body: {\n    name: 'Peter Parker',\n    salary: '100,000',\n    age: '38'\n  }\n}).then(function (resp) {\n  cy.writeFile('cypress/fixtures/employeeData.json', resp.body);\n});",
-              "err": {},
-              "uuid": "32ade0d3-e651-4c40-8c40-fead839ee018",
-              "parentUUID": "4cc3df4d-d8e4-49f5-be55-04b0a15bc157",
-              "isHook": false,
-              "skipped": false
-            }
-          ],
-          "suites": [],
-          "passes": [
-            "32ade0d3-e651-4c40-8c40-fead839ee018"
-          ],
-          "failures": [],
-          "pending": [],
-          "skipped": [],
-          "duration": 765,
-          "root": false,
-          "rootEmpty": false,
-          "_timeout": 2000
-        }
-      ],
-      "passes": [],
-      "failures": [],
-      "pending": [],
-      "skipped": [],
-      "duration": 0,
-      "root": true,
-      "rootEmpty": true,
-      "_timeout": 2000
-    },
-    {
-      "uuid": "fada6489-cf60-4903-99cc-541349c5f23d",
-      "title": "",
-      "fullFile": "",
-      "file": "",
-      "beforeHooks": [],
-      "afterHooks": [],
-      "tests": [],
-      "suites": [
-        {
-          "uuid": "587d6a6f-7f9e-454c-85f4-7dbdd8083365",
-          "title": "get created employee data",
-          "fullFile": "",
-          "file": "",
-          "beforeHooks": [],
-          "afterHooks": [],
-          "tests": [
-            {
-              "title": "reads employee data based on the id",
-              "fullTitle": "get created employee data reads employee data based on the id",
-              "timedOut": null,
-              "duration": 575,
-              "state": "passed",
-              "speed": "slow",
-              "pass": true,
-              "fail": false,
-              "pending": false,
-              "context": null,
-              "code": "cy.fixture('employeeData.json').then(function (employeeData) {\n  cy.request({\n    method: 'GET',\n    url: 'http://dummy.restapiexample.com/api/v1/employee/' + employeeData.data.id\n  }).then(function (resp) {\n    expect(employeeData.data.name).eq('Peter Parker');\n  });\n});",
-              "err": {},
-              "uuid": "ee7175aa-edef-42d3-bd06-d2fec54b682c",
-              "parentUUID": "587d6a6f-7f9e-454c-85f4-7dbdd8083365",
-              "isHook": false,
-              "skipped": false
-            }
-          ],
-          "suites": [],
-          "passes": [
-            "ee7175aa-edef-42d3-bd06-d2fec54b682c"
-          ],
-          "failures": [],
-          "pending": [],
-          "skipped": [],
-          "duration": 575,
-          "root": false,
-          "rootEmpty": false,
-          "_timeout": 2000
-        }
-      ],
-      "passes": [],
-      "failures": [],
-      "pending": [],
-      "skipped": [],
-      "duration": 0,
-      "root": true,
-      "rootEmpty": true,
-      "_timeout": 2000
-    },
     {
       "uuid": "a4b0cb96-c8f1-4aff-b6a8-1b1cf5399894",
       "title": "",
