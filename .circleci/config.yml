@@ -1,0 +1,11 @@
+steps:
+  - checkout
+  - run:
+      name: Running E2E tests
+      command: cypress run --reporter junit --reporter-options "mochaFile=results/my-test-output.xml"
+  - store_artifacts:
+      path: cypress/videos
+  - store_artifacts:
+      path: cypress/screenshots
+  - store_test_results:
+      path: results
