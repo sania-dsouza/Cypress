@@ -27,7 +27,7 @@ jobs:
           name: Running E2E tests with cypress-multi-reporters
           command: npm run test
       - store_test_results:
-          path: /root/app/cypress/reports/mochareports/report.html
+          path: cypress/reports/mochareports/report.html
       - store_artifacts:
           path: cypress/videos
       - store_artifacts:
