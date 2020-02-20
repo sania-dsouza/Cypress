@@ -7,7 +7,8 @@ describe('create an employee', function () {
         name: 'Peter Parker',
         salary: '100,000',
         age: '38'
-      }
+      },
+      failOnStatusCode: false
     }).then((resp) => {
       cy.writeFile('cypress/fixtures/employeeData.json', resp.body)
     })
