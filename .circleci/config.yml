@@ -24,10 +24,12 @@ jobs:
             - ~/.npm
             - ~/.cache
       - run:
-          name: Running E2E tests with cypress-multi-reporters
+          name: Running E2E tests with JUnit reporter
           command: npm run test
       - store_test_results:
-          path: cypress/reports/mochareports/report.html
+          path: junit-results
+      - store_test_results:
+          path: multiple-results
       - store_artifacts:
           path: cypress/videos
       - store_artifacts:
