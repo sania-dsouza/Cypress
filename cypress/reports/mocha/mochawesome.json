@@ -5,9 +5,9 @@
     "passes": 1,
     "pending": 0,
     "failures": 0,
-    "start": "2020-02-20T16:40:06.746Z",
-    "end": "2020-02-20T16:40:07.526Z",
-    "duration": 780,
+    "start": "2020-02-24T14:18:00.594Z",
+    "end": "2020-02-24T14:18:01.322Z",
+    "duration": 728,
     "testsRegistered": 1,
     "passPercent": 100,
     "pendingPercent": 0,
@@ -18,16 +18,16 @@
   },
   "results": [
     {
-      "uuid": "b22d41c6-9f3f-42f0-9fdd-482029ec7b31",
+      "uuid": "80a40316-9d03-438d-b958-c799f84372e7",
       "title": "",
-      "fullFile": "",
-      "file": "",
+      "fullFile": "cypress/integration/createEmployeeAPI.spec.js",
+      "file": "cypress/integration/createEmployeeAPI.spec.js",
       "beforeHooks": [],
       "afterHooks": [],
       "tests": [],
       "suites": [
         {
-          "uuid": "4cc3df4d-d8e4-49f5-be55-04b0a15bc157",
+          "uuid": "897cad1e-afc4-41aa-a05a-77b0882d8234",
           "title": "create an employee",
           "fullFile": "",
           "file": "",
@@ -38,29 +38,29 @@
               "title": "creates an employee with given test data using POST method",
               "fullTitle": "create an employee creates an employee with given test data using POST method",
               "timedOut": null,
-              "duration": 765,
+              "duration": 701,
               "state": "passed",
               "speed": "slow",
               "pass": true,
               "fail": false,
               "pending": false,
               "context": null,
-              "code": "cy.request({\n  method: 'POST',\n  url: 'http://dummy.restapiexample.com/api/v1/create',\n  body: {\n    name: 'Peter Parker',\n    salary: '100,000',\n    age: '38'\n  }\n}).then(function (resp) {\n  cy.writeFile('cypress/fixtures/employeeData.json', resp.body);\n});",
+              "code": "cy.request({\n  method: 'POST',\n  url: 'http://dummy.restapiexample.com/api/v1/create',\n  body: {\n    name: 'Peter Parker',\n    salary: '100,000',\n    age: '38'\n  },\n  failOnStatusCode: false\n}).then(function (resp) {\n  cy.writeFile('cypress/fixtures/employeeData.json', resp.body);\n});",
               "err": {},
-              "uuid": "32ade0d3-e651-4c40-8c40-fead839ee018",
-              "parentUUID": "4cc3df4d-d8e4-49f5-be55-04b0a15bc157",
+              "uuid": "0ec1e2ff-9ccc-45ed-a0e6-cc6a642a40f8",
+              "parentUUID": "897cad1e-afc4-41aa-a05a-77b0882d8234",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "32ade0d3-e651-4c40-8c40-fead839ee018"
+            "0ec1e2ff-9ccc-45ed-a0e6-cc6a642a40f8"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 765,
+          "duration": 701,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
@@ -82,7 +82,7 @@
     },
     "mochawesome": {
       "options": {
-        "quiet": false,
+        "quiet": true,
         "reportFilename": "mochawesome",
         "saveHtml": false,
         "saveJson": true,
@@ -95,7 +95,7 @@
       "options": {
         "id": "default",
         "reportDir": "cypress/reports/mocha",
-        "quite": true,
+        "quiet": true,
         "overwrite": false,
         "html": false,
         "json": true

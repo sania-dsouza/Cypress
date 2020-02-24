@@ -27,7 +27,7 @@ jobs:
           name: Running E2E tests with JUnit reporter
           command: npm run test:ci
       - store_test_results:
-          path: cypress/reports/mocha
+          path: cypress/reports/junit
       - store_artifacts:
           path: cypress/videos
       - store_artifacts:

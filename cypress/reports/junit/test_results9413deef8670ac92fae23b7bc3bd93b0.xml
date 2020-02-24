@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="Mocha Tests" time="0.527" tests="1" failures="0">
+  <testsuite name="Root Suite" timestamp="2020-02-24T14:18:02" tests="0" file="cypress/integration/getEmployeeAPI.spec.js" failures="0" time="0">
+  </testsuite>
+  <testsuite name="get created employee data" timestamp="2020-02-24T14:18:02" tests="1" failures="0" time="0.527">
+    <testcase name="get created employee data reads employee data based on the id" time="0.527" classname="reads employee data based on the id">
+    </testcase>
+  </testsuite>
+</testsuites>

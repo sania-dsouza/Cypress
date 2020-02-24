@@ -5,9 +5,9 @@
     "passes": 1,
     "pending": 0,
     "failures": 0,
-    "start": "2020-02-20T16:40:08.498Z",
-    "end": "2020-02-20T16:40:09.087Z",
-    "duration": 589,
+    "start": "2020-02-24T14:18:02.253Z",
+    "end": "2020-02-24T14:18:02.797Z",
+    "duration": 544,
     "testsRegistered": 1,
     "passPercent": 100,
     "pendingPercent": 0,
@@ -18,16 +18,16 @@
   },
   "results": [
     {
-      "uuid": "fada6489-cf60-4903-99cc-541349c5f23d",
+      "uuid": "9922988c-0523-46e0-b4ed-26ad7d0ad651",
       "title": "",
-      "fullFile": "",
-      "file": "",
+      "fullFile": "cypress/integration/getEmployeeAPI.spec.js",
+      "file": "cypress/integration/getEmployeeAPI.spec.js",
       "beforeHooks": [],
       "afterHooks": [],
       "tests": [],
       "suites": [
         {
-          "uuid": "587d6a6f-7f9e-454c-85f4-7dbdd8083365",
+          "uuid": "13ec1e7e-2f48-41ef-9904-899106a2a01b",
           "title": "get created employee data",
           "fullFile": "",
           "file": "",
@@ -38,29 +38,29 @@
               "title": "reads employee data based on the id",
               "fullTitle": "get created employee data reads employee data based on the id",
               "timedOut": null,
-              "duration": 575,
+              "duration": 527,
               "state": "passed",
               "speed": "slow",
               "pass": true,
               "fail": false,
               "pending": false,
               "context": null,
-              "code": "cy.fixture('employeeData.json').then(function (employeeData) {\n  cy.request({\n    method: 'GET',\n    url: 'http://dummy.restapiexample.com/api/v1/employee/' + employeeData.data.id\n  }).then(function (resp) {\n    expect(employeeData.data.name).eq('Peter Parker');\n  });\n});",
+              "code": "cy.fixture('employeeData.json').then(function (employeeData) {\n  cy.request({\n    method: 'GET',\n    url: 'http://dummy.restapiexample.com/api/v1/employee/' + employeeData.data.id,\n    failOnStatusCode: false\n  }).then(function (resp) {\n    expect(employeeData.data.name).eq('Peter Parker');\n  });\n});",
               "err": {},
-              "uuid": "ee7175aa-edef-42d3-bd06-d2fec54b682c",
-              "parentUUID": "587d6a6f-7f9e-454c-85f4-7dbdd8083365",
+              "uuid": "b7633590-0cfb-4459-a1ac-924204799fed",
+              "parentUUID": "13ec1e7e-2f48-41ef-9904-899106a2a01b",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "ee7175aa-edef-42d3-bd06-d2fec54b682c"
+            "b7633590-0cfb-4459-a1ac-924204799fed"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 575,
+          "duration": 527,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
@@ -82,7 +82,7 @@
     },
     "mochawesome": {
       "options": {
-        "quiet": false,
+        "quiet": true,
         "reportFilename": "mochawesome",
         "saveHtml": false,
         "saveJson": true,
@@ -95,7 +95,7 @@
       "options": {
         "id": "default",
         "reportDir": "cypress/reports/mocha",
-        "quite": true,
+        "quiet": true,
         "overwrite": false,
         "html": false,
         "json": true

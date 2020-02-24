@@ -2,14 +2,14 @@
   "stats": {
     "suites": 3,
     "tests": 3,
-    "passes": 2,
+    "passes": 3,
     "pending": 0,
-    "failures": 1,
-    "start": "2020-02-20T16:40:17.402Z",
-    "end": "2020-02-20T16:40:17.402Z",
-    "duration": 6653,
+    "failures": 0,
+    "start": "2020-02-24T14:18:09.934Z",
+    "end": "2020-02-24T14:18:09.934Z",
+    "duration": 6446,
     "testsRegistered": 3,
-    "passPercent": 66.66666666666667,
+    "passPercent": 100,
     "pendingPercent": 0,
     "other": 0,
     "hasOther": false,
@@ -18,16 +18,16 @@
   },
   "results": [
     {
-      "uuid": "b22d41c6-9f3f-42f0-9fdd-482029ec7b31",
+      "uuid": "80a40316-9d03-438d-b958-c799f84372e7",
       "title": "",
-      "fullFile": "",
-      "file": "",
+      "fullFile": "cypress/integration/createEmployeeAPI.spec.js",
+      "file": "cypress/integration/createEmployeeAPI.spec.js",
       "beforeHooks": [],
       "afterHooks": [],
       "tests": [],
       "suites": [
         {
-          "uuid": "4cc3df4d-d8e4-49f5-be55-04b0a15bc157",
+          "uuid": "897cad1e-afc4-41aa-a05a-77b0882d8234",
           "title": "create an employee",
           "fullFile": "",
           "file": "",
@@ -38,29 +38,29 @@
               "title": "creates an employee with given test data using POST method",
               "fullTitle": "create an employee creates an employee with given test data using POST method",
               "timedOut": null,
-              "duration": 765,
+              "duration": 701,
               "state": "passed",
               "speed": "slow",
               "pass": true,
               "fail": false,
               "pending": false,
               "context": null,
-              "code": "cy.request({\n  method: 'POST',\n  url: 'http://dummy.restapiexample.com/api/v1/create',\n  body: {\n    name: 'Peter Parker',\n    salary: '100,000',\n    age: '38'\n  }\n}).then(function (resp) {\n  cy.writeFile('cypress/fixtures/employeeData.json', resp.body);\n});",
+              "code": "cy.request({\n  method: 'POST',\n  url: 'http://dummy.restapiexample.com/api/v1/create',\n  body: {\n    name: 'Peter Parker',\n    salary: '100,000',\n    age: '38'\n  },\n  failOnStatusCode: false\n}).then(function (resp) {\n  cy.writeFile('cypress/fixtures/employeeData.json', resp.body);\n});",
               "err": {},
-              "uuid": "32ade0d3-e651-4c40-8c40-fead839ee018",
-              "parentUUID": "4cc3df4d-d8e4-49f5-be55-04b0a15bc157",
+              "uuid": "0ec1e2ff-9ccc-45ed-a0e6-cc6a642a40f8",
+              "parentUUID": "897cad1e-afc4-41aa-a05a-77b0882d8234",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "32ade0d3-e651-4c40-8c40-fead839ee018"
+            "0ec1e2ff-9ccc-45ed-a0e6-cc6a642a40f8"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 765,
+          "duration": 701,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
@@ -76,16 +76,16 @@
       "_timeout": 2000
     },
     {
-      "uuid": "fada6489-cf60-4903-99cc-541349c5f23d",
+      "uuid": "9922988c-0523-46e0-b4ed-26ad7d0ad651",
       "title": "",
-      "fullFile": "",
-      "file": "",
+      "fullFile": "cypress/integration/getEmployeeAPI.spec.js",
+      "file": "cypress/integration/getEmployeeAPI.spec.js",
       "beforeHooks": [],
       "afterHooks": [],
       "tests": [],
       "suites": [
         {
-          "uuid": "587d6a6f-7f9e-454c-85f4-7dbdd8083365",
+          "uuid": "13ec1e7e-2f48-41ef-9904-899106a2a01b",
           "title": "get created employee data",
           "fullFile": "",
           "file": "",
@@ -96,29 +96,29 @@
               "title": "reads employee data based on the id",
               "fullTitle": "get created employee data reads employee data based on the id",
               "timedOut": null,
-              "duration": 575,
+              "duration": 527,
               "state": "passed",
               "speed": "slow",
               "pass": true,
               "fail": false,
               "pending": false,
               "context": null,
-              "code": "cy.fixture('employeeData.json').then(function (employeeData) {\n  cy.request({\n    method: 'GET',\n    url: 'http://dummy.restapiexample.com/api/v1/employee/' + employeeData.data.id\n  }).then(function (resp) {\n    expect(employeeData.data.name).eq('Peter Parker');\n  });\n});",
+              "code": "cy.fixture('employeeData.json').then(function (employeeData) {\n  cy.request({\n    method: 'GET',\n    url: 'http://dummy.restapiexample.com/api/v1/employee/' + employeeData.data.id,\n    failOnStatusCode: false\n  }).then(function (resp) {\n    expect(employeeData.data.name).eq('Peter Parker');\n  });\n});",
               "err": {},
-              "uuid": "ee7175aa-edef-42d3-bd06-d2fec54b682c",
-              "parentUUID": "587d6a6f-7f9e-454c-85f4-7dbdd8083365",
+              "uuid": "b7633590-0cfb-4459-a1ac-924204799fed",
+              "parentUUID": "13ec1e7e-2f48-41ef-9904-899106a2a01b",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "ee7175aa-edef-42d3-bd06-d2fec54b682c"
+            "b7633590-0cfb-4459-a1ac-924204799fed"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 575,
+          "duration": 527,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
@@ -134,16 +134,16 @@
       "_timeout": 2000
     },
     {
-      "uuid": "a4b0cb96-c8f1-4aff-b6a8-1b1cf5399894",
+      "uuid": "e6eb7459-2cb1-4f8f-9bd9-40968550f390",
       "title": "",
-      "fullFile": "",
-      "file": "",
+      "fullFile": "cypress/integration/googleSearch.spec.js",
+      "file": "cypress/integration/googleSearch.spec.js",
       "beforeHooks": [],
       "afterHooks": [],
       "tests": [],
       "suites": [
         {
-          "uuid": "19d2e1e3-13e3-4498-b0c1-c37ef8a92ac6",
+          "uuid": "06a1ec80-bd85-4d47-9609-b57de90670a3",
           "title": "sample test",
           "fullFile": "",
           "file": "",
@@ -154,33 +154,29 @@
               "title": "opens google and search for text",
               "fullTitle": "sample test opens google and search for text",
               "timedOut": null,
-              "duration": 5313,
-              "state": "failed",
-              "speed": null,
-              "pass": false,
-              "fail": true,
+              "duration": 5218,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
               "pending": false,
               "context": null,
-              "code": "cy.visit('/');\ncy.fixture('searchTerms').then(function (searchTerms) {\n  cy.get('input[name=\"ql\"]').type(searchTerms.searchTerm1);\n});\ncy.get('input[name=\"btnK\"]', {\n  timeout: 1000\n}).first().click({\n  force: true\n});",
-              "err": {
-                "message": "CypressError: Timed out retrying: Expected to find element: 'input[name=\"ql\"]', but never found it.",
-                "estack": "CypressError: Timed out retrying: Expected to find element: 'input[name=\"ql\"]', but never found it.\n    at Object.cypressErr (https://www.google.com/__cypress/runner/cypress_runner.js:85348:11)\n    at Object.throwErr (https://www.google.com/__cypress/runner/cypress_runner.js:85303:18)\n    at Object.throwErrByPath (https://www.google.com/__cypress/runner/cypress_runner.js:85335:17)\n    at retry (https://www.google.com/__cypress/runner/cypress_runner.js:77321:16)\n    at onFailFn (https://www.google.com/__cypress/runner/cypress_runner.js:68422:16)\n    at tryCatcher (https://www.google.com/__cypress/runner/cypress_runner.js:118962:23)\n    at Promise._settlePromiseFromHandler (https://www.google.com/__cypress/runner/cypress_runner.js:116898:31)\n    at Promise._settlePromise (https://www.google.com/__cypress/runner/cypress_runner.js:116955:18)\n    at Promise._settlePromise0 (https://www.google.com/__cypress/runner/cypress_runner.js:117000:10)\n    at Promise._settlePromises (https://www.google.com/__cypress/runner/cypress_runner.js:117075:18)\n    at Async../node_modules/bluebird/js/release/async.js.Async._drainQueue (https://www.google.com/__cypress/runner/cypress_runner.js:113687:16)\n    at Async../node_modules/bluebird/js/release/async.js.Async._drainQueues (https://www.google.com/__cypress/runner/cypress_runner.js:113697:10)\n    at Async.drainQueues (https://www.google.com/__cypress/runner/cypress_runner.js:113571:14)\n    at <anonymous>",
-                "diff": null
-              },
-              "uuid": "49d10644-3884-4355-b05d-866afc24b9cc",
-              "parentUUID": "19d2e1e3-13e3-4498-b0c1-c37ef8a92ac6",
+              "code": "cy.visit('/');\ncy.fixture('searchTerms').then(function (searchTerms) {\n  cy.get('input[name=\"q\"]').type(searchTerms.searchTerm1);\n});\ncy.get('input[name=\"btnK\"]', {\n  timeout: 1000\n}).first().click({\n  force: true\n});",
+              "err": {},
+              "uuid": "62874f08-a3ce-4dc6-ae28-8f010f55ab10",
+              "parentUUID": "06a1ec80-bd85-4d47-9609-b57de90670a3",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
-          "passes": [],
-          "failures": [
-            "49d10644-3884-4355-b05d-866afc24b9cc"
+          "passes": [
+            "62874f08-a3ce-4dc6-ae28-8f010f55ab10"
           ],
+          "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 5313,
+          "duration": 5218,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
@@ -202,7 +198,7 @@
     },
     "mochawesome": {
       "options": {
-        "quiet": false,
+        "quiet": true,
         "reportFilename": "mochawesome",
         "saveHtml": false,
         "saveJson": true,
@@ -215,7 +211,7 @@
       "options": {
         "id": "default",
         "reportDir": "cypress/reports/mocha",
-        "quite": true,
+        "quiet": true,
         "overwrite": false,
         "html": false,
         "json": true

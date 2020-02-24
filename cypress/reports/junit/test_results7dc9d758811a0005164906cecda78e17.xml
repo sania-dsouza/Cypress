@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="Mocha Tests" time="0.701" tests="1" failures="0">
+  <testsuite name="Root Suite" timestamp="2020-02-24T14:18:00" tests="0" file="cypress/integration/createEmployeeAPI.spec.js" failures="0" time="0">
+  </testsuite>
+  <testsuite name="create an employee" timestamp="2020-02-24T14:18:00" tests="1" failures="0" time="0.701">
+    <testcase name="create an employee creates an employee with given test data using POST method" time="0.701" classname="creates an employee with given test data using POST method">
+    </testcase>
+  </testsuite>
+</testsuites>

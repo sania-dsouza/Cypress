@@ -12,20 +12,22 @@
     "posttest": "npm run combine-reports && npm run generate-report",
     "test": "npm run scripts || npm run posttest",
     "open": "cypress open",
-    "test:ci": "cypress run --reporter junit"
+    "test:ci": "cypress run --reporter cypress-multi-reporters"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "cypress": "^3.8.3"
+    "cypress": "^3.8.3",
+    "mocha-junit-reporters": "^1.23.6"
   },
   "devDependencies": {
     "cypress-multi-reporters": "^1.2.4",
     "mocha": "^6.2.2",
     "mochawesome": "^4.1.0",
     "mochawesome-merge": "^2.1.0",
-    "mochawesome-report-generator": "^4.1.0"
+    "mochawesome-report-generator": "^4.1.0",
+    "mocha-junit-reporter": "1.23.3"
   },
   "standard": {
     "globals": [

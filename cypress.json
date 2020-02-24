@@ -1,17 +1,10 @@
 {
     "baseUrl" : "https://www.google.com",
-    "reporter": "junit",
+    "reporter": "cypress-multi-reporters",
     "reporterOptions": {
-        "mochaFile": "cypress/reports/mocha/cypress-results-[hash].xml",
-        "toConsole": true,
-        "reporterEnabled": "mochawesome",
-        "mochawesomeReporterOptions": {
-            "reportDir": "cypress/reports/mocha",
-            "quite": true,
-            "overwrite": false,
-            "html": false,
-            "json": true
-        }
+        "configFile": "reporterOpts.json",
+        "html": false,
+        "json": true
     },
     "video": false
 }

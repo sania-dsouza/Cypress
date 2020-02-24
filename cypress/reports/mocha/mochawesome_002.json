@@ -2,14 +2,14 @@
   "stats": {
     "suites": 1,
     "tests": 1,
-    "passes": 0,
+    "passes": 1,
     "pending": 0,
-    "failures": 1,
-    "start": "2020-02-20T16:40:10.100Z",
-    "end": "2020-02-20T16:40:15.432Z",
-    "duration": 5332,
+    "failures": 0,
+    "start": "2020-02-24T14:18:03.863Z",
+    "end": "2020-02-24T14:18:09.104Z",
+    "duration": 5241,
     "testsRegistered": 1,
-    "passPercent": 0,
+    "passPercent": 100,
     "pendingPercent": 0,
     "other": 0,
     "hasOther": false,
@@ -18,16 +18,16 @@
   },
   "results": [
     {
-      "uuid": "a4b0cb96-c8f1-4aff-b6a8-1b1cf5399894",
+      "uuid": "e6eb7459-2cb1-4f8f-9bd9-40968550f390",
       "title": "",
-      "fullFile": "",
-      "file": "",
+      "fullFile": "cypress/integration/googleSearch.spec.js",
+      "file": "cypress/integration/googleSearch.spec.js",
       "beforeHooks": [],
       "afterHooks": [],
       "tests": [],
       "suites": [
         {
-          "uuid": "19d2e1e3-13e3-4498-b0c1-c37ef8a92ac6",
+          "uuid": "06a1ec80-bd85-4d47-9609-b57de90670a3",
           "title": "sample test",
           "fullFile": "",
           "file": "",
@@ -38,33 +38,29 @@
               "title": "opens google and search for text",
               "fullTitle": "sample test opens google and search for text",
               "timedOut": null,
-              "duration": 5313,
-              "state": "failed",
-              "speed": null,
-              "pass": false,
-              "fail": true,
+              "duration": 5218,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
               "pending": false,
               "context": null,
-              "code": "cy.visit('/');\ncy.fixture('searchTerms').then(function (searchTerms) {\n  cy.get('input[name=\"ql\"]').type(searchTerms.searchTerm1);\n});\ncy.get('input[name=\"btnK\"]', {\n  timeout: 1000\n}).first().click({\n  force: true\n});",
-              "err": {
-                "message": "CypressError: Timed out retrying: Expected to find element: 'input[name=\"ql\"]', but never found it.",
-                "estack": "CypressError: Timed out retrying: Expected to find element: 'input[name=\"ql\"]', but never found it.\n    at Object.cypressErr (https://www.google.com/__cypress/runner/cypress_runner.js:85348:11)\n    at Object.throwErr (https://www.google.com/__cypress/runner/cypress_runner.js:85303:18)\n    at Object.throwErrByPath (https://www.google.com/__cypress/runner/cypress_runner.js:85335:17)\n    at retry (https://www.google.com/__cypress/runner/cypress_runner.js:77321:16)\n    at onFailFn (https://www.google.com/__cypress/runner/cypress_runner.js:68422:16)\n    at tryCatcher (https://www.google.com/__cypress/runner/cypress_runner.js:118962:23)\n    at Promise._settlePromiseFromHandler (https://www.google.com/__cypress/runner/cypress_runner.js:116898:31)\n    at Promise._settlePromise (https://www.google.com/__cypress/runner/cypress_runner.js:116955:18)\n    at Promise._settlePromise0 (https://www.google.com/__cypress/runner/cypress_runner.js:117000:10)\n    at Promise._settlePromises (https://www.google.com/__cypress/runner/cypress_runner.js:117075:18)\n    at Async../node_modules/bluebird/js/release/async.js.Async._drainQueue (https://www.google.com/__cypress/runner/cypress_runner.js:113687:16)\n    at Async../node_modules/bluebird/js/release/async.js.Async._drainQueues (https://www.google.com/__cypress/runner/cypress_runner.js:113697:10)\n    at Async.drainQueues (https://www.google.com/__cypress/runner/cypress_runner.js:113571:14)\n    at <anonymous>",
-                "diff": null
-              },
-              "uuid": "49d10644-3884-4355-b05d-866afc24b9cc",
-              "parentUUID": "19d2e1e3-13e3-4498-b0c1-c37ef8a92ac6",
+              "code": "cy.visit('/');\ncy.fixture('searchTerms').then(function (searchTerms) {\n  cy.get('input[name=\"q\"]').type(searchTerms.searchTerm1);\n});\ncy.get('input[name=\"btnK\"]', {\n  timeout: 1000\n}).first().click({\n  force: true\n});",
+              "err": {},
+              "uuid": "62874f08-a3ce-4dc6-ae28-8f010f55ab10",
+              "parentUUID": "06a1ec80-bd85-4d47-9609-b57de90670a3",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
-          "passes": [],
-          "failures": [
-            "49d10644-3884-4355-b05d-866afc24b9cc"
+          "passes": [
+            "62874f08-a3ce-4dc6-ae28-8f010f55ab10"
           ],
+          "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 5313,
+          "duration": 5218,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
@@ -86,7 +82,7 @@
     },
     "mochawesome": {
       "options": {
-        "quiet": false,
+        "quiet": true,
         "reportFilename": "mochawesome",
         "saveHtml": false,
         "saveJson": true,
@@ -99,7 +95,7 @@
       "options": {
         "id": "default",
         "reportDir": "cypress/reports/mocha",
-        "quite": true,
+        "quiet": true,
         "overwrite": false,
         "html": false,
         "json": true
