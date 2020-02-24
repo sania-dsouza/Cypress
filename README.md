@@ -23,7 +23,17 @@ This repository contains basic Cypress framework that can be explored and extend
 **» Features:**
 
 1. Mochawesome .html report
+
+<div align="center">
+    <img src="Cypress/screenshots/MochawesomeReport.png" width="400px"</img> 
+</div>
+
 2. Junit report genration in Circel CI
+
+<div align="center">
+    <img src="Cypress/screenshots/CircelCI.png" width="400px"</img> 
+</div>
+
 3. Option to take screenshots and videos
 4. config.yml to customize Circel CI execution 
 
