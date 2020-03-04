@@ -1,5 +1,1 @@
-/*
-Cypress.Commands.add('generateName', {
-
-})
-*/
+import '@percy/cypress'
