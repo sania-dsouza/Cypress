@@ -1,5 +1,8 @@
 version: 2
 
+orbs:
+  percy: percy/agent@0.1.2
+
 jobs:
   build:
     docker:
