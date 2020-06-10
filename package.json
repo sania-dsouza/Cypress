@@ -13,7 +13,8 @@
     "test": "npm run scripts || npm run posttest",
     "open": "cypress open",
     "test:ci": "cypress run --reporter cypress-multi-reporters",
-    "percy":"percy exec -- npm run scripts || npm run posttest"
+    "percy":"percy exec -- npm run scripts || npm run posttest",
+    "percy:ci":"percy exec -- cypress run --reporter cypress-multi-reporters"
   },
   "keywords": [],
   "author": "",
