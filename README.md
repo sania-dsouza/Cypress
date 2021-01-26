@@ -19,6 +19,10 @@ This repository contains basic Cypress framework that can be explored and extend
    npm install mochawesome-report-generator --save-dev
    npm install mocha-junit-reporters
 ```
+3. Install the following dependencies for accessibility tests (Remember that you will need a recent version of Cypress for the a11y tests to function correctly)
+```
+    npm install cypress-axe axe-core -D
+```
    
 **» Features:**
 
@@ -43,4 +47,6 @@ This repository contains basic Cypress framework that can be explored and extend
 2. To run in Circle CI:
    - Register in Circle CI and link Git repository. Circle CI: https://circleci.com/integrations/github/
    - Schedule a job to run the scripts that refers config.yml
+3. To run the accessbility tests, run the command: `npm run test:axe`
+This is set to run the single spec a11y-tests.spec.js but that can be changed in the package.json script. 
    
