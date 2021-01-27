@@ -2,12 +2,12 @@
 
 describe('Accessibility tests -- Test page', () => {
 
-    before(() => {
+    beforeEach(() => {
         cy.visit('https://www.seleniumeasy.com/test/bootstrap-alert-messages-demo.html');  // test page
+        cy.injectAxe();
     })
 
     it('Test 1: Particular section of test page', () => {
-        cy.injectAxe();
 
         cy.checkA11y('.footer', {
                 runOnly: {
@@ -20,7 +20,6 @@ describe('Accessibility tests -- Test page', () => {
     })
 
     it('Test 2: Exclude a section of the page', () => {
-        cy.injectAxe();
 
         cy.checkA11y({
                 exclude: ['.footer']
@@ -35,7 +34,6 @@ describe('Accessibility tests -- Test page', () => {
     })
 
     it('Test 3: Entire page', () => {
-        cy.injectAxe();
 
         cy.checkA11y('body', {
                 runOnly: {
@@ -48,7 +46,6 @@ describe('Accessibility tests -- Test page', () => {
     })
 
     it('Test 4: Passing test', () => {
-        cy.injectAxe();
 
         cy.checkA11y('.row > .navbar', {
                 runOnly: {
@@ -63,7 +60,6 @@ describe('Accessibility tests -- Test page', () => {
     it('Test 5: Viewport test', () => {
         
         ['iphone-6', 'ipad'].forEach((device) => {
-            cy.injectAxe();
             cy.viewport(device);
 
             cy.checkA11y('body', {
