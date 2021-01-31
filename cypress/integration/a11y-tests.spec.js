@@ -1,4 +1,5 @@
 // Accessibility tests
+//Note: Tests 1, 2, 3 and 5 are intentionally meant to fail. Only 4 must pass. 
 
 describe('Accessibility tests -- Test page', () => {
 

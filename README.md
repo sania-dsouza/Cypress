@@ -48,5 +48,6 @@ This repository contains basic Cypress framework that can be explored and extend
    - Register in Circle CI and link Git repository. Circle CI: https://circleci.com/integrations/github/
    - Schedule a job to run the scripts that refers config.yml
 3. To run the accessbility tests, run the command: `npm run test:axe`
-This is set to run the single spec a11y-tests.spec.js but that can be changed in the package.json script. 
+This will display the Cypress tests available to run from Cypress/integration folder. Clicking the spec a11y-tests.spec.js will start the a11y tests. 
+This outputs the results in the console. Also, if you want to view any violations on the webpage (if they exist), click the line on the Cypress dialog which starts with 'A11Y ERROR!-'. This marks all the violations. 
    
