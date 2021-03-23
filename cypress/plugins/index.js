@@ -10,13 +10,23 @@
 
 // This function is called when a project is opened or re-opened (e.g. due to
 // the project's config changing)
-
-module.exports = (on, config) => {
-
-}
 // percyHealthCheck
 const percyHealthCheck = require('@percy/cypress/task')
 
 module.exports = (on, config) => {
   on('task', percyHealthCheck)
+
+  on('task', {
+    log(message) {
+      console.log(message)
+ 
+      return null
+    },
+    table(message) {
+      console.table(message)
+ 
+      return null
+    }
+  })
+
 }
