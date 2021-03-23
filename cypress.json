@@ -1,10 +1,11 @@
 {
-    "baseUrl" : "https://www.google.com",
-    "reporter": "cypress-multi-reporters",
-    "reporterOptions": {
-        "configFile": "reporterOpts.json",
-        "html": false,
-        "json": true
-    },
-    "video": false
+  "baseUrl": "https://www.google.com",
+  "reporter": "cypress-multi-reporters",
+  "reporterOptions": {
+    "configFile": "reporterOpts.json",
+    "html": false,
+    "json": true
+  },
+  "video": false,
+  "projectId": "rkfi16"
 }
