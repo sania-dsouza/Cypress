@@ -15,7 +15,7 @@
     "test:ci": "cypress run --reporter cypress-multi-reporters",
     "percy": "percy exec -- npm run scripts || npm run posttest",
     "percy:ci": "percy exec -- cypress run --reporter cypress-multi-reporters",
-    "test:axe": "./node_modules/.bin/cypress run --spec cypress/integration/a11y-tests.spec.js"
+    "test:axe": "./node_modules/.bin/cypress open"
   },
   "keywords": [],
   "author": "",
