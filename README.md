@@ -1,5 +1,8 @@
 # Cypress
 This repository contains basic Cypress framework that can be explored and extended.
+<div align="left">
+    <img src="https://www.cypress.io/static/33498b5f95008093f5f94467c61d20ab/fe882/cypress-logo.png" width="400px"</img> 
+</div>
 
 **» Pre-requisites to this course include:**
 
@@ -29,17 +32,14 @@ This repository contains basic Cypress framework that can be explored and extend
 1. Mochawesome .html report
 
 <div align="left">
-    <img src="/cypress/screenshots/MochawesomeReport.png" width="400px"</img> 
+    <img src="https://raw.githubusercontent.com/adamgruber/mochawesome/c896191fe4b8d0dcd9c596bb4976ff63b43649c6/docs/marge-report-1.0.1.png" width="400px"</img> 
 </div>
 
 2. Junit report genration in Circel CI
-
-<div align="left">
-    <img src="/cypress/screenshots/CircelCI.png" width="400px"</img> 
-</div>
-
 3. Option to take screenshots and videos
 4. config.yml to customize Circel CI execution 
+5. main.yml to run tests using Github actions
+6. Integrated Cypress dashboard with Github actions
 
 **» Steps to run this project:**
 
