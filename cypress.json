@@ -7,5 +7,9 @@
     "json": true
   },
   "video": false,
-  "projectId": "rkfi16"
+  "projectId": "rkfi16",
+  "retries": {
+    "runMode": 2,
+    "openMode": 0
+  }
 }
