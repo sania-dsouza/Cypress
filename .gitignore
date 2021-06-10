@@ -2,3 +2,6 @@ node_modules
 package-lock.json
 cypress/**/reports
 cypress/screenshots
+visual-testing/screenshots
+visual-testing/.reports
+visual-testing/visual-check-testcafe
