@@ -13,6 +13,7 @@
 // percyHealthCheck
 const percyHealthCheck = require('@percy/cypress/task')
 const { lighthouse, pa11y, prepareAudit } = require("cypress-audit");
+const getCompareSnapshotsPlugin = require('cypress-visual-regression/dist/plugin');
 
 module.exports = (on, config) => {
   on('task', percyHealthCheck)
@@ -42,7 +43,7 @@ module.exports = (on, config) => {
     pa11y: pa11y(), // calling the function is important
   });
 
-
+  getCompareSnapshotsPlugin(on, config);
 }
 
 require('@applitools/eyes-cypress')(module);

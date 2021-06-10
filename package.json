@@ -15,13 +15,15 @@
     "test:ci": "cypress run --reporter cypress-multi-reporters",
     "percy": "percy exec -- npm run scripts || npm run posttest",
     "percy:ci": "percy exec -- cypress run --reporter cypress-multi-reporters",
-    "test:axe": "./node_modules/.bin/cypress open"
+    "test:axe": "./node_modules/.bin/cypress open",
+    "get-visual-base" : "./node_modules/.bin/cypress run --env type=base --config screenshotsFolder=cypress/snapshots/base,testFiles=\"**/visual-test.spec.js\""
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
     "browserstack-cypress-cli": "^1.8.1",
+    "cypress-visual-regression": "^1.5.7",
     "mocha-junit-reporters": "^1.23.6"
   },
   "devDependencies": {
